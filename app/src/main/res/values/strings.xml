@@ -4,4 +4,9 @@
     <string name="Submission_ID_Column">A</string>
     <string name="Sheet_ID">1Wr9odPLLolIRifCuMXiogkhiTh9CuaFKaFrXxhT_J2I</string>
     <string name="jotform_url">https://www.jotform.com/edit/</string>
+    <string name="cancel">Cancel</string>
+    <string name="confirm">Confirm</string>
+    <string name="no_medical_history">No medical history</string>
+    <string name="group_a">Group A</string>
+    <string name="name">Caitlyn Meninthal</string>
 </resources>

@@ -1,6 +1,7 @@
 package com.example.qrcheckin
 
 import android.content.Context
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Bundle
 import android.widget.Toast
@@ -15,13 +16,19 @@ import com.journeyapps.barcodescanner.ScanOptions
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
-    lateinit var unique_ID: String
+    private lateinit var uniqueID: String
 
     private fun setResult(string: String) {
+        // This snippet can be edited to grab whatever id from whatever qr code
         if (string.startsWith(getString(R.string.jotform_url))) {
             val lastIndex = string.lastIndexOf('/')
-            unique_ID = string.substring(lastIndex + 1)
-            binding.textResult.text = unique_ID
+            uniqueID = string.substring(lastIndex + 1)
+
+            val intent = Intent(this,MainActivity2::class.java)
+            intent.putExtra("unique_ID", uniqueID)
+            startActivity(intent)
+
+            //binding.textResult.text = unique_ID
         }
         else{
             Toast.makeText(this, "Not a valid QR Code",Toast.LENGTH_SHORT).show()
