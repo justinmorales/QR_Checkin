@@ -81,4 +81,6 @@ dependencies {
     implementation (libs.google.api.client)
     implementation (libs.google.oauth.client.jetty)
     implementation (libs.google.api.services.sheets)
+    implementation(libs.play.services.auth)
+
 }
